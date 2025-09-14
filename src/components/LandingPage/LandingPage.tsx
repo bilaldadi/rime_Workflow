@@ -14,6 +14,21 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Set theme color for landing page
+  useEffect(() => {
+    const themeColorMeta = document.getElementById('theme-color') as HTMLMetaElement;
+    if (themeColorMeta) {
+      themeColorMeta.content = '#0f0f23';
+    }
+    
+    // Cleanup: reset to default when component unmounts
+    return () => {
+      if (themeColorMeta) {
+        themeColorMeta.content = '#ffffff';
+      }
+    };
+  }, []);
+
   return (
     <div className="landing-page">
       {/* Animated background */}
