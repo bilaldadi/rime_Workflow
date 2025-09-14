@@ -1,0 +1,251 @@
+.canvas-container {
+  flex: 1;
+  position: relative;
+  background: #f8fafc;
+  min-height: 0;
+}
+
+.workflow-node {
+  position: relative;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  min-height: 60px;
+  transition: all 0.2s ease;
+}
+
+.workflow-node:hover {
+  border-color: #4b0082;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.workflow-node.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.node-header {
+  background: #4b0082;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.55rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  max-width: fit-content;
+  overflow: wrap;
+}
+
+.node-content {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 9rem;
+  overflow: wrap;
+}
+
+.node-label {
+  font-size: 0.675rem;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: center;
+  word-break: break-word;
+}
+
+.node-ports {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.port {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.workflow-node:hover .port {
+  opacity: 1;
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.workflow-node:hover .react-flow__handle {
+  opacity: 1;
+}
+
+.react-flow__handle-top {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.react-flow__handle-right {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.react-flow__handle-bottom {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.react-flow__handle-left {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.port-top {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.port-right {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.port-bottom {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.port-left {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  cursor: grab;
+}
+
+.react-flow__node:active {
+  cursor: grabbing;
+}
+
+.react-flow__edge {
+  cursor: pointer;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #3b82f6;
+  stroke-width: 2px;
+}
+
+.react-flow__edge-text {
+  font-size: 0.75rem;
+  fill: #6b7280;
+  background: white;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.react-flow__controls {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.react-flow__controls-button {
+  background: white;
+  border: none;
+  color: #374151;
+  transition: background-color 0.15s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-flow__controls-button:hover {
+  background: #f3f4f6;
+}
+
+.react-flow__controls-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.react-flow__background {
+  background-color: #f8fafc;
+}
+
+.react-flow__minimap {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__minimap-mask {
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__minimap-node {
+  fill: #3b82f6;
+  stroke: #1e40af;
+  stroke-width: 2;
+}
+
+.react-flow__minimap-edge {
+  stroke: #6b7280;
+  stroke-width: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .workflow-node {
+    min-width: 100px;
+    min-height: 50px;
+  }
+  
+  .node-content {
+    padding: 8px;
+  }
+  
+  .node-label {
+    font-size: 0.75rem;
+  }
+  
+  .node-header {
+    font-size: 0.625rem;
+    padding: 1px 6px;
+  }
+  
+  .port {
+    width: 6px;
+    height: 6px;
+  }
+}
