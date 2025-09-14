@@ -74,21 +74,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           </button>
         </div>
 
-        {/* Features preview */}
-        <div className="features-section">
-          <div className="feature-item">
-            <div className="feature-icon">⚡</div>
-            <span>Real-time Editing</span>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">🔗</div>
-            <span>Smart Connections</span>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">📱</div>
-            <span>Mobile Ready</span>
-          </div>
-        </div>
       </div>
     </div>
   );
