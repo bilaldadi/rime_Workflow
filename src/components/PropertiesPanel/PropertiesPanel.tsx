@@ -13,7 +13,6 @@ export const PropertiesPanel: React.FC = () => {
     clearSelection,
   } = useGraphStore();
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
   const [nodeLabel, setNodeLabel] = useState('');
   const [nodeType, setNodeType] = useState('');
   const [edgeCondition, setEdgeCondition] = useState('');
@@ -57,39 +56,17 @@ export const PropertiesPanel: React.FC = () => {
     }
   };
 
-  const handleClose = () => {
-    clearSelection();
-  };
-
   const hasSelection = selectedNodeId || selectedEdgeId;
 
   return (
-    <div className={`properties-panel ${isCollapsed ? 'collapsed' : ''} ${hasSelection ? 'visible' : ''}`}>
+    <div className={`properties-panel ${hasSelection ? 'visible' : ''}`}>
       <div className="properties-header">
         <h3 className="properties-title">
           {selectedNode ? 'Node Properties' : selectedEdge ? 'Edge Properties' : 'Properties'}
         </h3>
-        <div className="properties-actions">
-          <button
-            className="collapse-button"
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            title={isCollapsed ? 'Expand' : 'Collapse'}
-          >
-            {isCollapsed ? '▶' : '▼'}
-          </button>
-          {hasSelection && (
-            <button
-              className="close-button"
-              onClick={handleClose}
-              title="Close"
-            >
-              ✕
-            </button>
-          )}
-        </div>
       </div>
 
-      {!isCollapsed && hasSelection && (
+      {hasSelection && (
         <div className="properties-content">
           {selectedNode && (
             <div className="property-group">
@@ -193,7 +170,7 @@ export const PropertiesPanel: React.FC = () => {
         </div>
       )}
 
-      {!isCollapsed && !hasSelection && (
+      {!hasSelection && (
         <div className="properties-empty">
           <p>Select a node or edge to edit its properties</p>
         </div>

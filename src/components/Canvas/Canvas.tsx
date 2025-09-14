@@ -69,16 +69,25 @@ export const Canvas: React.FC<CanvasProps> = () => {
     (changes: NodeChange[]) => {
       onNodesChange(changes);
       
-      // Handle selection changes
-      changes.forEach((change) => {
-        if (change.type === 'select') {
-          if (change.selected) {
-            setSelectedNodeId(change.id);
-          } else {
+      // Handle selection changes - process all changes first, then handle selection
+      const selectionChanges = changes.filter(change => change.type === 'select');
+      
+      if (selectionChanges.length > 0) {
+        // Find the last selected node
+        const selectedNode = selectionChanges
+          .filter(change => change.selected)
+          .pop();
+        
+        if (selectedNode) {
+          setSelectedNodeId(selectedNode.id);
+        } else {
+          // Only clear if no nodes are selected
+          const hasSelectedNodes = selectionChanges.some(change => change.selected);
+          if (!hasSelectedNodes) {
             setSelectedNodeId(null);
           }
         }
-      });
+      }
     },
     [onNodesChange, setSelectedNodeId]
   );
@@ -87,16 +96,25 @@ export const Canvas: React.FC<CanvasProps> = () => {
     (changes: EdgeChange[]) => {
       onEdgesChange(changes);
       
-      // Handle selection changes
-      changes.forEach((change) => {
-        if (change.type === 'select') {
-          if (change.selected) {
-            setSelectedEdgeId(change.id);
-          } else {
+      // Handle selection changes - process all changes first, then handle selection
+      const selectionChanges = changes.filter(change => change.type === 'select');
+      
+      if (selectionChanges.length > 0) {
+        // Find the last selected edge
+        const selectedEdge = selectionChanges
+          .filter(change => change.selected)
+          .pop();
+        
+        if (selectedEdge) {
+          setSelectedEdgeId(selectedEdge.id);
+        } else {
+          // Only clear if no edges are selected
+          const hasSelectedEdges = selectionChanges.some(change => change.selected);
+          if (!hasSelectedEdges) {
             setSelectedEdgeId(null);
           }
         }
-      });
+      }
     },
     [onEdgesChange, setSelectedEdgeId]
   );
@@ -116,25 +134,28 @@ export const Canvas: React.FC<CanvasProps> = () => {
   
 
   const handlePaneClick = useCallback((event: React.MouseEvent) => {
-    if (event.detail === 2) {
-      // Double click - add node
-      const position = reactFlowInstance.screenToFlowPosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-      
-      const newNode = {
-        id: generateNodeId(),
-        position,
-        data: { label: 'New Node', type: getDefaultNodeType() },
-        type: 'workflow',
-      };
-      
-      addNode(newNode);
-      toast.success('Node added successfully');
-    } else {
-      // Single click - clear selection
-      clearSelection();
+    // Only handle pane clicks, not clicks on nodes or edges
+    if (event.target === event.currentTarget) {
+      if (event.detail === 2) {
+        // Double click - add node
+        const position = reactFlowInstance.screenToFlowPosition({
+          x: event.clientX,
+          y: event.clientY,
+        });
+        
+        const newNode = {
+          id: generateNodeId(),
+          position,
+          data: { label: 'New Node', type: getDefaultNodeType() },
+          type: 'workflow',
+        };
+        
+        addNode(newNode);
+        toast.success('Node added successfully');
+      } else {
+        // Single click - clear selection
+        clearSelection();
+      }
     }
   }, [clearSelection, reactFlowInstance, addNode]);
 
