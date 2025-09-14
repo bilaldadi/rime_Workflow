@@ -10,7 +10,7 @@ import {
   type EdgeChange,
   type Connection,
 } from '@xyflow/react';
-import toast from 'react-hot-toast';
+import { showSuccessToast, showErrorToast } from '../../utils/toastHelpers';
 import { useGraphStore } from '../../store/graphStore';
 import { validateEdgeConnection, generateNodeId, getDefaultNodeType } from '../../utils/validation';
 import './Canvas.css';
@@ -126,7 +126,7 @@ export const Canvas: React.FC<CanvasProps> = () => {
       if (validation.isValid) {
         onConnect(connection, connection.sourceHandle === 'right-source' ? 'if con 1' : 'else');
       } else {
-        toast.error(validation.reason || 'Invalid connection');
+        showErrorToast(validation.reason || 'Invalid connection');
       }
     },
     [onConnect, edges]
@@ -151,7 +151,7 @@ export const Canvas: React.FC<CanvasProps> = () => {
         };
         
         addNode(newNode);
-        toast.success('Node added successfully');
+        showSuccessToast('Node added successfully');
       } else {
         // Single click - clear selection
         clearSelection();
