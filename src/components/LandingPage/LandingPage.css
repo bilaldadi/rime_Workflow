@@ -359,8 +359,12 @@
 @media (max-width: 768px) {
   .landing-content {
     padding: 1rem;
+    padding-top: 1rem;
   }
   
+  .logo-section {
+    margin-bottom: 2rem;
+  }
   
   .logo-wrapper {
     width: 200px;
@@ -383,10 +387,18 @@
   .features-section {
     gap: 2rem;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
   }
   
   .feature-item {
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7d8590;
+    font-weight: 400;
   }
 }
 
