@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ReactFlowProvider } from '@xyflow/react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '@xyflow/react/dist/style.css';
 
+import { LandingPage } from './components/LandingPage';
 import { Toolbar } from './components/Toolbar';
 import { Canvas } from './components/Canvas';
 import { PropertiesPanel } from './components/PropertiesPanel';
@@ -11,12 +12,17 @@ import { useKeyboardShortcuts } from './utils/keyboardShortcuts';
 import './styles/App.css';
 
 export default function App() {
+  const [showWorkflow, setShowWorkflow] = useState(false);
   const { handleKeyDown } = useKeyboardShortcuts();
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
+
+  const handleStartWorkflow = () => {
+    setShowWorkflow(true);
+  };
 
   const handleZoomIn = () => {
     if ((window as any).canvasZoomIn) {
@@ -35,6 +41,10 @@ export default function App() {
       (window as any).canvasFitView();
     }
   };
+
+  if (!showWorkflow) {
+    return <LandingPage onStart={handleStartWorkflow} />;
+  }
 
   return (
     <div className="app">
