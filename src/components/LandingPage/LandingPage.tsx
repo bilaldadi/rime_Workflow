@@ -38,7 +38,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           <div className="logo-container">
             <div className="logo-wrapper">
               <img 
-                src="/src/assets/logo.avif" 
+                src="/logo.avif" 
                 alt="Workflow Engine Logo" 
                 className="logo-image"
               />
