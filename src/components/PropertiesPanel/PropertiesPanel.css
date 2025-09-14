@@ -178,10 +178,12 @@
   }
   
   .property-input.readonly {
-    display: block;
-    background: #f9fafb;
-    color: #6b7280;
-    cursor: not-allowed;
+    display: none;
+  }
+  
+  /* Hide labels for readonly fields on mobile */
+  .property-item:has(.property-input.readonly) .property-label {
+    display: none;
   }
   
   .properties-empty {
