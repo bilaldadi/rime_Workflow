@@ -10,7 +10,6 @@ export const PropertiesPanel: React.FC = () => {
     selectedEdgeId,
     updateNode,
     updateEdge,
-    clearSelection,
   } = useGraphStore();
 
   const [nodeLabel, setNodeLabel] = useState('');
