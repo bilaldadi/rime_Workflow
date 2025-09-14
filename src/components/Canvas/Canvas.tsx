@@ -124,7 +124,7 @@ export const Canvas: React.FC<CanvasProps> = () => {
       const validation = validateEdgeConnection(connection.source!, connection.target!, edges);
   
       if (validation.isValid) {
-        onConnect(connection, connection.sourceHandle === 'right-source' ? 'if con 1' : 'else');
+        onConnect(connection, connection.sourceHandle === 'right-source' ? 'if con ' : 'condition');
       } else {
         showErrorToast(validation.reason || 'Invalid connection');
       }

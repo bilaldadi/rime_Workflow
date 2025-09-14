@@ -65,7 +65,7 @@ export const useGraphStore = create<GraphState>((set, get) => ({
     { id: 'n2', position: { x: 300, y: 100 }, data: { label: 'Process', type: 'process' }, type: 'workflow' },
   ],
   edges: [
-    { id: 'e1', source: 'n1', target: 'n2', label: 'always', data: { condition: 'always' } },
+    { id: 'e1', source: 'n1', target: 'n2', label: 'Condition', data: { condition: 'always' } },
   ],
   selectedNodeId: null,
   selectedEdgeId: null,

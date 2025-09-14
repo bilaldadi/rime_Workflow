@@ -91,6 +91,36 @@
   transition: opacity 0.2s ease;
 }
 
+/* Mobile: Larger handles for easier tapping */
+@media (max-width: 768px) {
+  .react-flow__handle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+  }
+  
+  .workflow-node:hover .react-flow__handle {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Make handles always visible on mobile for easier connection */
+  .workflow-node .react-flow__handle {
+    opacity: 0.9;
+  }
+  
+  /* Larger touch targets for connection areas */
+  .react-flow__handle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: transparent;
+  }
+}
+
 .workflow-node:hover .react-flow__handle {
   opacity: 1;
 }

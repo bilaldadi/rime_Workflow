@@ -98,7 +98,7 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1110px) {
   .toolbar-container {
     display: block;
   }

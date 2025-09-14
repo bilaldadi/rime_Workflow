@@ -30,10 +30,6 @@ export const generateEdgeId = (): string => {
   return `edge-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const getNodeTypes = (): string[] => {
-  return ['start', 'process', 'decision', 'end', 'custom'];
-};
-
 export const getDefaultNodeType = (): string => {
-  return 'process';
+  return 'Node Type';
 };
