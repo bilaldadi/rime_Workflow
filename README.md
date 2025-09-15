@@ -72,7 +72,6 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 - **Responsive Layout**: Adapts to all screen sizes (320px+)
 - **Mobile Handles**: Larger, always-visible connection points
 - **Compact UI**: Streamlined interface for small screens
-- **Status Bar**: Custom theme colors for iOS/Android
 
 ![Mobile View](./screenshots/mobile-view.png)
 
@@ -125,14 +124,5 @@ npm run dev
 ### **Mobile Usage**
 - **Touch to select** nodes and edges
 - **Pinch to zoom** and pan around the canvas
-- **Long press** for context menus (future feature)
 - **Swipe** to navigate large workflows
 
-
-##  **Browser Support**
-
-- **Chrome**: 90+
-- **Firefox**: 88+
-- **Safari**: 14+
-- **Edge**: 90+
-- **Mobile**: iOS 14+, Android 8+
