@@ -97,7 +97,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 ```bash
 # Clone the repository
 git clone https://github.com/bilaldadi/rime_Workflow.git
-cd rime-workflow
+cd rime_Workflow
 
 # Install dependencies
 npm install
