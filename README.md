@@ -4,7 +4,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![RIME Workflow Engine](./screenshots/hero-image.png)
 
-## 🚀 Features
+##  Features
 
 ### 🎨 **Modern Landing Page**
 - **Futuristic Design**: Dark theme with animated background and floating particles
@@ -14,7 +14,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Landing Page](./screenshots/landing-page.png)
 
-### 🖼️ **Visual Workflow Canvas**
+###  **Visual Workflow Canvas**
 - **React Flow Integration**: Professional node-based editor
 - **Pan & Zoom**: Smooth navigation with mouse and touch support
 - **Snap to Grid**: Precise node positioning with 12px grid
@@ -22,7 +22,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Workflow Canvas](./screenshots/workflow-canvas.png)
 
-### 🔗 **Smart Node System**
+###  **Smart Node System**
 - **Custom Nodes**: Workflow-specific node types with labels and types
 - **Four-Side Connections**: Connect from any side (top, right, bottom, left)
 - **Flexible Handles**: Both source and target handles on each side
@@ -31,7 +31,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Node System](./screenshots/node-connections.png)
 
-### 🔄 **Advanced Edge Management**
+###  **Advanced Edge Management**
 - **Conditional Edges**: Add custom conditions to connections
 - **Multiple Connections**: Allow multiple edges between same nodes with different conditions
 - **Smart Validation**: Prevent invalid connections (no self-loops)
@@ -40,7 +40,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Edge Management](./screenshots/edge-conditions.png)
 
-### ⚙️ **Properties Panel**
+###  **Properties Panel**
 - **Real-time Editing**: Edit node labels and types instantly
 - **Edge Conditions**: Modify connection conditions on the fly
 - **Responsive Design**: 
@@ -51,7 +51,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Properties Panel](./screenshots/properties-panel.png)
 
-### 🛠️ **Toolbar & Controls**
+###  **Toolbar & Controls**
 - **Add Node**: Quick node creation with toolbar button
 - **Zoom Controls**: Zoom in, zoom out, fit to view
 - **Undo/Redo**: Full history management (up to 20 actions)
@@ -60,14 +60,14 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Toolbar](./screenshots/toolbar-controls.png)
 
-### ⌨️ **Keyboard Shortcuts**
+###  **Keyboard Shortcuts**
 - **Ctrl/Cmd + Z**: Undo last action
 - **Ctrl/Cmd + Shift + Z**: Redo last undone action
 - **Delete/Backspace**: Delete selected node or edge
 - **Escape**: Clear selection
 - **Double-click**: Add new node at cursor position
 
-### 📱 **Mobile-First Design**
+###  **Mobile-First Design**
 - **Touch Optimized**: Large touch targets and gestures
 - **Responsive Layout**: Adapts to all screen sizes (320px+)
 - **Mobile Handles**: Larger, always-visible connection points
@@ -76,14 +76,14 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ![Mobile View](./screenshots/mobile-view.png)
 
-### 🎯 **User Experience**
+###  **User Experience**
 - **Toast Notifications**: Success/error feedback with click-to-dismiss
 - **Smooth Animations**: 60fps transitions and effects
 - **Loading States**: Elegant loading animations
 - **Error Handling**: Graceful error recovery
 - **Accessibility**: Keyboard navigation and screen reader support
 
-## 🛠️ **Technology Stack**
+##  **Technology Stack**
 
 - **Frontend**: React 18 + TypeScript
 - **State Management**: Zustand
@@ -92,7 +92,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 - **Build Tool**: Vite
 - **Notifications**: React Toastify
 
-## 📦 **Installation**
+##  **Installation**
 
 ```bash
 # Clone the repository
@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-## 🚀 **Usage**
+##  **Usage**
 
 ### **Getting Started**
 1. **Launch the app** - You'll see the futuristic landing page
@@ -129,7 +129,7 @@ npm run dev
 - **Swipe** to navigate large workflows
 
 
-## 📱 **Browser Support**
+##  **Browser Support**
 
 - **Chrome**: 90+
 - **Firefox**: 88+
