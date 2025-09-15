@@ -212,6 +212,12 @@ export const Canvas: React.FC<CanvasProps> = () => {
             fill: '#374151',
             fontWeight: 500,
           },
+          markerEnd: {
+            type: 'arrowclosed',
+            width: 12,
+            height: 12,
+            color: '#3b82f6',
+          },
           labelBgStyle: {
             fill: 'white',
             fillOpacity: 0.8,

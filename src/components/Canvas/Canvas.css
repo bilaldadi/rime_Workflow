@@ -36,8 +36,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
-  display: inline-block;  
-  max-width: 120px;    
+  max-width: 9rem;    
   white-space: normal;     
   word-break: break-word;
   overflow-wrap: anywhere; 
