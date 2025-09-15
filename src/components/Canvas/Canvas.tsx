@@ -203,7 +203,7 @@ export const Canvas: React.FC<CanvasProps> = () => {
         nodeTypes={nodeTypes}
         fitView
         snapToGrid
-        snapGrid={[20, 20]}
+        snapGrid={[12, 12]}
         defaultEdgeOptions={{
           type: 'smoothstep',
           animated: true,

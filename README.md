@@ -1,180 +1,139 @@
-# Workflow Canvas
+# RIME Workflow Engine
 
-A powerful, responsive workflow canvas built with React, TypeScript, and React Flow. Create, edit, and manage workflow diagrams with an intuitive interface.
+A powerful, intuitive visual workflow editor built with React, TypeScript, and React Flow. Create, design, and manage complex workflows with drag-and-drop simplicity.
 
-## Features
+![RIME Workflow Engine](./screenshots/hero-image.png)
 
-### 🎨 **Interactive Canvas**
-- **Pan & Zoom**: Navigate large workflows with smooth panning and zooming
-- **Snap to Grid**: Align nodes perfectly with 20px grid snapping
-- **Double-click to Add**: Quickly add nodes by double-clicking on empty canvas
-- **Drag & Drop**: Move nodes around the canvas with visual feedback
+## 🚀 Features
 
-### 🔧 **Node Management**
-- **Add Nodes**: Use toolbar button or double-click on canvas
-- **Node Types**: Support for start, process, decision, end, and custom types
-- **Editable Properties**: Change node labels and types in real-time
-- **Duplicate Nodes**: Clone existing nodes with one click
-- **Visual Ports**: Connection points on all four sides of nodes
+### 🎨 **Modern Landing Page**
+- **Futuristic Design**: Dark theme with animated background and floating particles
+- **Brand Integration**: Custom logo with neon border effects
+- **Responsive Layout**: Optimized for all devices from mobile to desktop
+- **Smooth Animations**: Elegant transitions and loading effects
 
-### 🔗 **Edge Connections**
-- **Drag to Connect**: Create edges by dragging from node ports
-- **Condition Labels**: Add conditional logic to edges
-- **Validation**: Prevents invalid connections (self-loops, duplicates)
-- **Smooth Animations**: Beautiful animated edge transitions
+![Landing Page](./screenshots/landing-page.png)
 
-### ⚡ **Powerful Editing**
-- **Selection**: Click to select nodes/edges, drag-box for multiple selection
-- **Properties Panel**: Edit node labels, types, and edge conditions
-- **Keyboard Shortcuts**: Efficient workflow with hotkeys
-- **Delete Operations**: Remove nodes/edges with keyboard or UI
+### 🖼️ **Visual Workflow Canvas**
+- **React Flow Integration**: Professional node-based editor
+- **Pan & Zoom**: Smooth navigation with mouse and touch support
+- **Snap to Grid**: Precise node positioning with 12px grid
+- **Background Grid**: Visual guide for alignment
+- **Minimap**: Overview of large workflows (optional)
 
-### ↩️ **Undo/Redo System**
-- **20-Action History**: Track up to 20 operations
-- **Smart Snapshots**: Automatic history on meaningful changes
-- **Keyboard Shortcuts**: Ctrl/Cmd+Z for undo, Ctrl/Cmd+Shift+Z for redo
+![Workflow Canvas](./screenshots/workflow-canvas.png)
 
-### 📱 **Responsive Design**
-- **Mobile-First**: Works from 320px to large desktop screens
-- **Collapsible Panels**: Properties panel adapts to screen size
-- **Touch-Friendly**: Optimized for touch interactions
+### 🔗 **Smart Node System**
+- **Custom Nodes**: Workflow-specific node types with labels and types
+- **Four-Side Connections**: Connect from any side (top, right, bottom, left)
+- **Flexible Handles**: Both source and target handles on each side
+- **Mobile Optimized**: Larger touch targets for mobile devices
+- **Visual Feedback**: Hover effects and connection highlights
 
-## Installation & Setup
+![Node System](./screenshots/node-connections.png)
 
-### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+### 🔄 **Advanced Edge Management**
+- **Conditional Edges**: Add custom conditions to connections
+- **Multiple Connections**: Allow multiple edges between same nodes with different conditions
+- **Smart Validation**: Prevent invalid connections (no self-loops)
+- **Animated Edges**: Smooth, animated connections
+- **Edge Labels**: Display conditions along the edge path
 
-### Quick Start
+![Edge Management](./screenshots/edge-conditions.png)
+
+### ⚙️ **Properties Panel**
+- **Real-time Editing**: Edit node labels and types instantly
+- **Edge Conditions**: Modify connection conditions on the fly
+- **Responsive Design**: 
+  - Desktop: Always visible sidebar
+  - Mobile: Compact bar under toolbar
+- **Smart Fields**: Show only editable fields on mobile
+- **Auto-save**: Changes applied immediately
+
+![Properties Panel](./screenshots/properties-panel.png)
+
+### 🛠️ **Toolbar & Controls**
+- **Add Node**: Quick node creation with toolbar button
+- **Zoom Controls**: Zoom in, zoom out, fit to view
+- **Undo/Redo**: Full history management (up to 20 actions)
+- **Visual Controls**: React Flow's built-in navigation controls
+- **Keyboard Shortcuts**: Power user shortcuts for efficiency
+
+![Toolbar](./screenshots/toolbar-controls.png)
+
+### ⌨️ **Keyboard Shortcuts**
+- **Ctrl/Cmd + Z**: Undo last action
+- **Ctrl/Cmd + Shift + Z**: Redo last undone action
+- **Delete/Backspace**: Delete selected node or edge
+- **Escape**: Clear selection
+- **Double-click**: Add new node at cursor position
+
+### 📱 **Mobile-First Design**
+- **Touch Optimized**: Large touch targets and gestures
+- **Responsive Layout**: Adapts to all screen sizes (320px+)
+- **Mobile Handles**: Larger, always-visible connection points
+- **Compact UI**: Streamlined interface for small screens
+- **Status Bar**: Custom theme colors for iOS/Android
+
+![Mobile View](./screenshots/mobile-view.png)
+
+### 🎯 **User Experience**
+- **Toast Notifications**: Success/error feedback with click-to-dismiss
+- **Smooth Animations**: 60fps transitions and effects
+- **Loading States**: Elegant loading animations
+- **Error Handling**: Graceful error recovery
+- **Accessibility**: Keyboard navigation and screen reader support
+
+## 🛠️ **Technology Stack**
+
+- **Frontend**: React 18 + TypeScript
+- **State Management**: Zustand
+- **Flow Editor**: React Flow (@xyflow/react)
+- **Styling**: CSS Modules with responsive design
+- **Build Tool**: Vite
+- **Notifications**: React Toastify
+
+## 📦 **Installation**
 
 ```bash
+# Clone the repository
+git clone https://github.com/bilaldadi/rime_Workflow.git
+cd rime-workflow
+
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
-
-# Build for production
-npm run build
 ```
 
-The app will be available at `http://localhost:5173`
+## 🚀 **Usage**
 
-## Usage Guide
+### **Getting Started**
+1. **Launch the app** - You'll see the futuristic landing page
+2. **Click "Get started"** - Enter the workflow canvas
+3. **Add nodes** - Use the toolbar button or double-click on canvas
+4. **Connect nodes** - Drag from any node handle to another
+5. **Edit properties** - Select nodes/edges to edit in the properties panel
 
-### Basic Operations
+### **Creating Workflows**
+1. **Add Nodes**: Click the "Add Node" button or double-click on empty canvas
+2. **Move Nodes**: Drag nodes to position them
+3. **Connect Nodes**: Drag from any handle (blue dots) to another node
+4. **Add Conditions**: Edit edge conditions in the properties panel
+5. **Save Work**: Use undo/redo to manage your workflow history
 
-#### Adding Nodes
-1. **Toolbar**: Click "Add Node" button
-2. **Canvas**: Double-click on empty canvas area
-3. **Properties**: Edit label and type in the properties panel
+### **Mobile Usage**
+- **Touch to select** nodes and edges
+- **Pinch to zoom** and pan around the canvas
+- **Long press** for context menus (future feature)
+- **Swipe** to navigate large workflows
 
-#### Creating Edges
-1. **Drag Connection**: Click and drag from one node port to another
-2. **Add Condition**: Edit the condition in the properties panel
-3. **Validation**: Invalid connections are automatically prevented
 
-#### Editing Properties
-1. **Select**: Click on a node or edge
-2. **Properties Panel**: Appears on the right side
-3. **Edit**: Change labels, types, or conditions in real-time
+## 📱 **Browser Support**
 
-### Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl/Cmd + Z` | Undo last action |
-| `Ctrl/Cmd + Shift + Z` | Redo last undone action |
-| `Delete` / `Backspace` | Delete selected node/edge |
-| `Escape` | Clear selection |
-
-### Node Types
-
-- **Start**: Beginning of workflow
-- **Process**: General processing step
-- **Decision**: Conditional branching
-- **End**: Workflow termination
-- **Custom**: User-defined type
-
-### Edge Conditions
-
-Edges support conditional logic with free-text conditions:
-- `always` - Always execute
-- `if success` - Execute on success
-- `if error` - Execute on error
-- `when condition` - Custom conditions
-
-## Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── Canvas.tsx      # Main workflow canvas
-│   ├── Toolbar.tsx     # Top toolbar with actions
-│   └── PropertiesPanel.tsx # Right-side properties editor
-├── store/              # State management
-│   └── graphStore.ts   # Zustand store with undo/redo
-├── utils/              # Utility functions
-│   ├── validation.ts   # Edge validation logic
-│   └── keyboardShortcuts.ts # Keyboard event handling
-└── styles/             # CSS styles
-    └── App.css         # Global styles and layout
-```
-
-## Technical Details
-
-### State Management
-- **Zustand**: Lightweight state management
-- **Undo/Redo**: Custom implementation with 20-action history
-- **TypeScript**: Full type safety throughout
-
-### Performance
-- **Debounced Updates**: Node position changes are debounced
-- **Efficient Rendering**: React Flow optimizations
-- **Memory Management**: History capped at 20 operations
-
-### Browser Support
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## Development
-
-### Available Scripts
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-```
-
-### Code Quality
-- **TypeScript**: Strict type checking
-- **ESLint**: Code linting and formatting
-- **Component Separation**: Clear component boundaries
-- **Responsive CSS**: Mobile-first design approach
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## License
-
-MIT License - see LICENSE file for details
-
-## Support
-
-For issues and questions:
-1. Check the documentation above
-2. Search existing issues
-3. Create a new issue with detailed description
-
----
-
-**Built with ❤️ using React, TypeScript, and React Flow**
+- **Chrome**: 90+
+- **Firefox**: 88+
+- **Safari**: 14+
+- **Edge**: 90+
+- **Mobile**: iOS 14+, Android 8+
