@@ -19,7 +19,6 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 - **Pan & Zoom**: Smooth navigation with mouse and touch support
 - **Snap to Grid**: Precise node positioning with 12px grid
 - **Background Grid**: Visual guide for alignment
-- **Minimap**: Overview of large workflows (optional)
 
 ![Workflow Canvas](./screenshots/workflow-canvas.png)
 
