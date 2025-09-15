@@ -6,7 +6,7 @@ A powerful, intuitive visual workflow editor built with React, TypeScript, and R
 
 ##  Features
 
-### 🎨 **Modern Landing Page**
+###  **Modern Landing Page**
 - **Futuristic Design**: Dark theme with animated background and floating particles
 - **Brand Integration**: Custom logo with neon border effects
 - **Responsive Layout**: Optimized for all devices from mobile to desktop
